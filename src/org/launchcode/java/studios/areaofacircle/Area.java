@@ -6,8 +6,14 @@ public class Area {
         Scanner firstUserInput = new Scanner(System.in);
         System.out.println("Enter a radius: ");
         double radius = firstUserInput.nextDouble();
-        double area = Circle.getArea(radius);
-        System.out.println("The area of a circle of radius " + radius + " 2.is: " + area);
+        firstUserInput.skip("\n");
+        if(radius < 0){
+            System.out.println("Cannot use negative numbers");
+        } else {
+            double area = Circle.getArea(radius);
+            System.out.println("The area of a circle of radius " + radius + " 2.is: " + area);
+        }
 
+        firstUserInput.close();
     }
 }
