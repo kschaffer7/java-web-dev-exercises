@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class HashMapPractice {
 
     public static void main(String[] args) {
-
+        //Here, <Integer, String> defines the data types for this map’s <key, value> pairs.
         HashMap<Integer, String> students = new HashMap<>();
         Scanner input = new Scanner(System.in);
         String newStudent;
 
         System.out.println("Enter your students (or ENTER to finish):");
 
-        // Get student names and grades
+        // It takes in student names and ID numbers (as integers)
         do {
 
             System.out.print("Student: ");
@@ -23,6 +23,8 @@ public class HashMapPractice {
             if (!newStudent.equals("")) {
                 System.out.print("ID Number: ");
                 int idNumber = input.nextInt();
+                //We can add a new item with a .put() method, specifying both key and value
+                //The keys should be the IDs and the values should be the names.
                 students.put(idNumber, newStudent);
 
                 // Read in the newline before looping back (this is another solution similar to input.skip("\n")
