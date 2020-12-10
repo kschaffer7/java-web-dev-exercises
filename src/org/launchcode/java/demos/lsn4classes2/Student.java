@@ -30,21 +30,42 @@ public class Student {
 
 
      //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
+    public String getGradeLevel() {
+        // Determine the grade level of the student based on numberOfCredits
+        if(this.numberOfCredits <= 29){
+            return "Freshman";
+        } else if(this.numberOfCredits >= 30 && this.numberOfCredits <= 59){
+            return "Sophomore";
+        } else if(this.numberOfCredits <= 89){
+            return "Junior";
+        } else {
+            return "Senior";
+        }
+    }
 
     // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
+        this.numberOfCredits += courseCredits;
+        double courseQualityScore = courseCredits * grade;
+        double overallQualityScore = this.numberOfCredits * this.getGpa();
+        this.gpa = (courseQualityScore + overallQualityScore)/this.numberOfCredits;
     }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
+    @Override
+    public String toString() {
+        return "Name:" + this.name + ", ID: " + this.studentId;
+    }
 
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
-
+    @Override
+//    public boolean equals(Object toBeCompared){
+//        Student student2 = (Student) toBeCompared;
+//        return this.gpa == student2.gpa;
+//    }
     public String getName() {
         return name;
     }
