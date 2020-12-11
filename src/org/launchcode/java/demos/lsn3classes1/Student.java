@@ -11,10 +11,10 @@ public class Student {
     private double gpa = 0.0;
     // getters and setters allow us to keep the above fields private and limit accessibility
     // data can only be manipulated through these getters and setters
+
     // setter for name
     public void setName(String name){
         this.name = name;
-
     }
     // getter for name
     public String getName(){
@@ -32,10 +32,10 @@ public class Student {
     public int getNumberOfCredits(){
         return this.numberOfCredits;
     }
-    public void setgpa(double gpa){
+    public void setGpa(double gpa){
         this.gpa = gpa;
     }
-    public double gpa(){
+    public double getGpa(){
         return this.gpa;
     }
 

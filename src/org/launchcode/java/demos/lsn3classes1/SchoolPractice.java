@@ -6,12 +6,13 @@ public class SchoolPractice {
         Student kirsti = new Student();
         kirsti.setName("Kirsti");
         kirsti.setStudentId(1);
-        kirsti.setNumberOfCredits(6);
-        kirsti.setgpa(4.0);
+        kirsti.setNumberOfCredits(1);
+        kirsti.setGpa(4.0);
 
         Course java = new Course(101, "Intro to Java");
-
         java.addStudent(kirsti);
         System.out.println(java.getStudents());
+
+//        System.out.println(kirsti.getName() + kirsti.getStudentId() + kirsti.getGpa());
     }
 }
