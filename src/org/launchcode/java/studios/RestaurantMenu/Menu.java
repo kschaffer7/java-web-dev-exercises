@@ -13,7 +13,7 @@ public class Menu {
         this.lastUpdated = LocalDate.now();
     }
 
-    public void removeMenuItem( MenuItem menuItem){
+    public void removeMenuItem(MenuItem menuItem){
         this.menuItems.remove(menuItem);
         this.lastUpdated = LocalDate.now();
     }
@@ -24,14 +24,15 @@ public class Menu {
 
     @Override
     public String toString() {
-        String menu = " ";
+        String menu = "";
         for(MenuItem item: this.menuItems){
             if(item.isNew()){
                 menu += "*";
             }
+
             menu += item.toString() + "\n";
         }
-        menu += "Last updated: " + this.lastUpdated;
+        menu += "\n* indicates item is new. \nLast updated: " + this.lastUpdated;
         return menu;
     }
 }

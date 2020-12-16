@@ -3,10 +3,10 @@ package org.launchcode.java.studios.RestaurantMenu;
 public class Restaurant {
     public static void main(String[] args) {
 
-        MenuItem menuItem1 = new MenuItem("Mexican Pizza", 3.99, "Just Like Taco Bell", "Main");
-        MenuItem menuItem2 = new MenuItem("Potato", 1.99, "Loaded!", "Main");
-        MenuItem menuItem3 = new MenuItem("Wings", 10.99, "Spicy!", "App");
-        MenuItem menuItem4 = new MenuItem("Cheesecake", 2.99, "Strawberry", "Dessert");
+        MenuItem menuItem1 = new MenuItem("Mexican Pizza", 3.99, "Just Like Taco Bell!", "Main Course");
+        MenuItem menuItem2 = new MenuItem("Potato", 1.99, "Loaded!", "Main Course");
+        MenuItem menuItem3 = new MenuItem("Wings", 10.99, "Spicy!", "Appetizer");
+        MenuItem menuItem4 = new MenuItem("Cheesecake", 2.99, "Very Very Strawberry!", "Dessert");
 
         Menu theMenu = new Menu();
 
